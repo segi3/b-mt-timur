@@ -263,6 +263,7 @@ return [
             'text' => 'Tambah Akun',
             'url'  => 'users/add',
             'icon' => 'fas fa-fw fa-user',
+            'can'  => ['isSupervisor', 'isManager'],
         ],
 
         ['header' => 'OPERASIONAL'],
