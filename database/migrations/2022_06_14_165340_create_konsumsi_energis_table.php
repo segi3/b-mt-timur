@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('konsumsi_energi', function (Blueprint $table) {
             $table->id();
 
-            $table->string('jenis_energi');
-            $table->double('nilai_konsumsi_energi');
-            $table->timestamp('tanggal');
+            $table->double('konsumsi_listrik');
+            $table->double('konsumsi_air');
+            $table->double('konsumsi_gas');
+            $table->date('tanggal');
 
             $table->timestamps();
         });

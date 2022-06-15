@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('utilitas', function (Blueprint $table) {
             $table->id();
 
-            $table->timestamp('tanggal');
+            $table->string('no_util');
+            $table->date('tanggal');
             $table->string('jenis_utilitas');
             $table->string('lokasi_utilitas');
             $table->string('status_utilitas');

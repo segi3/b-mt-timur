@@ -256,12 +256,12 @@ return [
         ['header' => 'AKUN'],
         [
             'text' => 'Daftar Akun',
-            'url'  => 'users/list',
+            'url'  => 'users',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'Tambah Akun',
-            'url'  => 'users/add',
+            'url'  => 'users/create',
             'icon' => 'fas fa-fw fa-user',
             'can'  => ['isSupervisor', 'isManager'],
         ],
@@ -269,12 +269,12 @@ return [
         ['header' => 'OPERASIONAL'],
         [
             'text' => 'Pengunaan Energi',
-            'url'  => 'operational/energy-consumption/list',
+            'url'  => 'energy',
             'icon' => 'fas fa-fw fa-lightbulb',
         ],
         [
             'text' => 'Operasional',
-            'url'  => 'operational/utilities/list',
+            'url'  => 'utilitas',
             'icon' => 'fas fa-fw fa-toolbox',
         ],
         [
@@ -285,7 +285,7 @@ return [
         ['header' => 'KOMPLAIN'],
         [
             'text' => 'Daftar Komplain',
-            'url'  => 'complaint/list',
+            'url'  => 'komplain',
             'icon' => 'fas fa-fw fa-scroll',
         ],
         // [

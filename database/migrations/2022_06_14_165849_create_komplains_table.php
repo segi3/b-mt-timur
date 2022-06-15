@@ -16,13 +16,18 @@ return new class extends Migration
         Schema::create('komplain', function (Blueprint $table) {
             $table->id();
 
+            $table->string('nama_pelapor');
             $table->timestamp('tgl_penyampaian');
             $table->string('bidang_pekerjaan');
             $table->string('uraian_pekerjaan');
             $table->string('status_pekerjaan');
-            $table->string('nama_pelapor');
+            $table->string('nama_teknisi');
+
+            $table->unsignedBigInteger('user_id')->nullable();
 
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

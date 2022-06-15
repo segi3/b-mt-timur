@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class KonsumsiEnergi extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'konsumsi_air', 'konsumsi_air', 'konsumsi_gas',
+        'tanggal'
+    ];
 }

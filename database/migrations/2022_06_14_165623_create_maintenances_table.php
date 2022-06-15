@@ -20,11 +20,12 @@ return new class extends Migration
             $table->string('uraian_pekerjaan');
             $table->string('status_pekerjaan');
             $table->string('keterangan');
-            $table->unsignedBigInteger('user_id');
+
+            $table->unsignedBigInteger('utilitas_id');
 
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('utilitas_id')->references('id')->on('utilitas');
         });
     }
 
