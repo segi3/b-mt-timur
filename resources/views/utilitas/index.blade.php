@@ -4,7 +4,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @stop
 
-@section('title', 'AdminLTE')
+@section('title', 'Gramedia Maintenance')
 
 @section('content_header')
 <h1 class="m-0 text-dark">Operasional</h1>
