@@ -56,6 +56,7 @@ class UtilitasCRUDController extends Controller
         $util->status_utilitas = $request->status_utilitas;
         $util->keterangan = $request->keterangan;
         $util->tanggal = $request->tanggal;
+        $util->bidang_utilitas = $request->bidang_utilitas;
         $util->save();
 
         return redirect()->route('utilitas.index')

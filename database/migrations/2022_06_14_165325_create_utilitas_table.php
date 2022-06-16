@@ -18,6 +18,7 @@ return new class extends Migration
 
             $table->string('no_util');
             $table->date('tanggal');
+            $table->string('bidang_utilitas')->default('-');
             $table->string('jenis_utilitas');
             $table->string('lokasi_utilitas');
             $table->string('status_utilitas');
