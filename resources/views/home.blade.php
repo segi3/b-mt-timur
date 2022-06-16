@@ -11,9 +11,49 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <p class="mb-0">You are logged in!</p>
+                    <div class="row">
+                        <div class="col-lg-3 div-nav">
+                            <img src="https://picsum.photos/400/300" alt="" style="max-width: 100%;">
+                            <div style="text-align: center;">
+                                Operasional
+                            </div>
+                            <a href="/utilitas"></a>
+                        </div>
+
+                        <div class="col-lg-3 div-nav">
+                            <img src="https://picsum.photos/400/300" alt="" style="max-width: 100%;">
+                            <div style="text-align: center;">
+                                Konsumsi Energi
+                            </div>
+                            <a href="/energy"></a>
+                        </div>
+                        <div class="col-lg-3 div-nav">
+                            <img src="https://picsum.photos/400/300" alt="" style="max-width: 100%;">
+                            <div style="text-align: center;">
+                                Maintenance
+                            </div>
+                            <a href="/maintenance"></a>
+                        </div>
+                        <div class="col-lg-3 div-nav">
+                            <img src="https://picsum.photos/400/300" alt="" style="max-width: 100%;">
+                            <div style="text-align: center;">
+                                Komplain
+                            </div>
+                            <a href="/komplain"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+@stop
+
+@section('js')
+<script type="text/javascript">
+
+$(".div-nav").click(function() {
+  window.location = $(this).find("a").attr("href");
+  return false;
+});
+</script>
 @stop

@@ -255,6 +255,12 @@ return [
         // ],
         ['header' => 'AKUN'],
         [
+            'text' => 'Home',
+            'url'  => 'home',
+            'icon' => 'fas fa-fw fa-home',
+        ],
+        ['header' => 'AKUN'],
+        [
             'text' => 'Daftar Akun',
             'url'  => 'users',
             'icon' => 'fas fa-fw fa-user',
@@ -355,6 +361,21 @@ return [
     */
 
     'plugins' => [
+        'Date Range Picker' => [
+            'active' => false,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/daterangepicker/daterangepicker.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/daterangepicker/daterangepicker.css',
+                ],
+            ],
+        ],
         'Datatables' => [
             'active' => true,
             'files' => [

@@ -31,10 +31,18 @@ class KomplainCRUDController extends Controller
     }
 
     public function create_guest() {
+        if(request()->ajax()) {
+            return datatables()->of(Komplain::select('*'))
+            // ->addColumn('action', 'komplain.action')
+            // ->rawColumns(['action'])
+            ->addIndexColumn()
+            ->make(true);
+        }
+        $komplains = DB::table('komplain')->get();
         $user = DB::table('users')->where('role', 'teknisi')->get();
         // dd($user);
 
-        return view('komplain.create-guest', compact('user'));
+        return view('komplain.create-guest', compact('user', 'komplains'));
     }
 
     public function store(Request $request)

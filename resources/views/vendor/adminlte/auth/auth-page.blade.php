@@ -20,8 +20,8 @@
 
         {{-- Logo --}}
         <div class="{{ $auth_type ?? 'login' }}-logo">
-            <a href="{{ $dashboard_url }}">
-                {{-- <img src="{{ asset(config('adminlte.logo_img')) }}" height="50"> --}}
+            <a href="{{ $dashboard_url }}" style="font-size: 30px">
+                <img src="{{ asset('img/logo.png') }}" height="50">
                 <b>Gramedia</b> Maintenance
                 {{-- {!! config('adminlte.logo', '<b>Gramedia</b> maintenance') !!} --}}
             </a>
