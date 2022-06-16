@@ -32,6 +32,7 @@ Route::get('komplain/guest', [Controllers\KomplainCRUDController::class, 'create
 Route::post('komplain', [Controllers\KomplainCRUDController::class, 'store'])->name('komplain.store');
 
 Route::middleware(['auth'])->group(function() {
+
     // users
     Route::resource('users', Controllers\UserCRUDController::class);
     Route::post('delete-user', [Controllers\UserCRUDController::class, 'destroy']);
@@ -50,6 +51,6 @@ Route::middleware(['auth'])->group(function() {
     Route::get('komplain/{komplain}', [Controllers\KomplainCRUDController::class, 'show'])->name('komplain.show');
     Route::get('komplain/{komplain}/edit', [Controllers\KomplainCRUDController::class, 'edit'])->name('komplain.edit');
     Route::put('komplain/{komplain}', [Controllers\KomplainCRUDController::class, 'update'])->name('komplain.update');
+
+    Route::get('maintenance', [Controllers\MaintenanceController::class, 'index']);
 });
-
-

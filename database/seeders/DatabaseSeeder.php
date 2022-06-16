@@ -78,6 +78,16 @@ class DatabaseSeeder extends Seeder
             'keterangan' => 'Lampu redup',
         ]);
 
+        // maintenance
+        DB::table('maintenance')->insert([
+            'jadwal_maintenance' =>  Carbon::today(),
+            'no_util' => 'Nomor Util',
+            'uraian_pekerjaan' => 'Pompa transfer di basement panas dan air tidak mau keluar',
+            'status_pekerjaan' => 'Waiting',
+            'keterangan' => 'Keterangan',
+            'utilitas_id' => null
+        ]);
+
         // komplain
         DB::table('komplain')->insert([
             'tgl_penyampaian' =>  Carbon::now(),

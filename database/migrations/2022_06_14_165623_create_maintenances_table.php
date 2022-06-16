@@ -16,12 +16,13 @@ return new class extends Migration
         Schema::create('maintenance', function (Blueprint $table) {
             $table->id();
 
-            $table->timestamp('jadwal_maintenance');
+            $table->string('no_util');
+            $table->date('jadwal_maintenance');
             $table->string('uraian_pekerjaan');
             $table->string('status_pekerjaan');
             $table->string('keterangan');
 
-            $table->unsignedBigInteger('utilitas_id');
+            $table->unsignedBigInteger('utilitas_id')->nullable();
 
             $table->timestamps();
 

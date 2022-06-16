@@ -53,7 +53,7 @@ class KomplainCRUDController extends Controller
             'status_pekerjaan' => 'Waiting',
             'nama_pelapor' => $request->nama_pelapor,
             'user_id' => null,
-            'nama_teknisi' => $request->nama_teknisi
+            'nama_teknisi' => $request->nama_teknisi == null ? '-' : $request->nama_teknisi
         ]);
         return redirect()->route('komplain.index')
             ->with('success','Komplain baru berhasil Dibuat.');

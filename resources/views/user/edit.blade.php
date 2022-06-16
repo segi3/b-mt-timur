@@ -67,7 +67,7 @@
                 <div class="form-group">
                     <strong>Role:</strong>
                     <select name="role" class="form-control">
-                        <option value="supervisor" {{ $user->role == 'supervisor' ? 'selected' : '' }}>Supervisor</option>
+                        <option value="superintendent" {{ $user->role == 'superintendent' ? 'selected' : '' }}>Superintendent</option>
                         <option value="manager" {{ $user->role == 'manager' ? 'selected' : '' }}>Manager</option>
                         <option value="teknisi" {{ $user->role == 'teknisi' ? 'selected' : '' }}>Teknisi</option>
                     </select>

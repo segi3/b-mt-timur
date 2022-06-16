@@ -279,7 +279,7 @@ return [
         ],
         [
             'text' => 'Maintenance',
-            'url'  => 'operational/maintenance/list',
+            'url'  => 'maintenance',
             'icon' => 'fas fa-fw fa-tools',
         ],
         ['header' => 'KOMPLAIN'],

@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            {{-- <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Teknisi:</strong>
                     <select name="nama_teknisi" class="form-control">
@@ -68,7 +68,7 @@
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
                 </div>
-            </div>
+            </div> --}}
 
             <button type="submit" class="mt-5 btn btn-primary">Submit</button>
         </div>

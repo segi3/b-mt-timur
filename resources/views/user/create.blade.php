@@ -66,7 +66,7 @@
                 <div class="form-group">
                     <strong>Role:</strong>
                     <select name="role" class="form-control">
-                        <option value="supervisor">Supervisor</option>
+                        <option value="superintendent">Superintendent</option>
                         <option value="manager">Manager</option>
                         <option value="teknisi">Teknisi</option>
                     </select>
