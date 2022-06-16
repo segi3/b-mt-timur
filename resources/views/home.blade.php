@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-3 div-nav">
-                            <img src="https://picsum.photos/400/300" alt="" style="max-width: 100%;">
+                            <img src="{{ asset('img/ph-home-1.png') }}" alt="" style="max-width: 100%;">
                             <div style="text-align: center;">
                                 Operasional
                             </div>
@@ -21,21 +21,21 @@
                         </div>
 
                         <div class="col-lg-3 div-nav">
-                            <img src="https://picsum.photos/400/300" alt="" style="max-width: 100%;">
+                            <img src="{{ asset('img/ph-home-2.png') }}" alt="" style="max-width: 100%;">
                             <div style="text-align: center;">
                                 Konsumsi Energi
                             </div>
                             <a href="/energy"></a>
                         </div>
                         <div class="col-lg-3 div-nav">
-                            <img src="https://picsum.photos/400/300" alt="" style="max-width: 100%;">
+                            <img src="{{ asset('img/ph-home-3.png') }}" alt="" style="max-width: 100%;">
                             <div style="text-align: center;">
                                 Maintenance
                             </div>
                             <a href="/maintenance"></a>
                         </div>
                         <div class="col-lg-3 div-nav">
-                            <img src="https://picsum.photos/400/300" alt="" style="max-width: 100%;">
+                            <img src="{{ asset('img/ph-home-4.png') }}" alt="" style="max-width: 100%;">
                             <div style="text-align: center;">
                                 Komplain
                             </div>
