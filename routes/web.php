@@ -52,5 +52,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('komplain/{komplain}/edit', [Controllers\KomplainCRUDController::class, 'edit'])->name('komplain.edit');
     Route::put('komplain/{komplain}', [Controllers\KomplainCRUDController::class, 'update'])->name('komplain.update');
 
-    Route::get('maintenance', [Controllers\MaintenanceController::class, 'index']);
+    Route::get('maintenance', [Controllers\MaintenanceController::class, 'index'])->name('maintenance.index');
+    Route::get('maintenance/{maintenance}/edit', [Controllers\MaintenanceController::class, 'edit'])->name('maintenance.edit');
+    Route::put('maintenance/{maintenance}', [Controllers\MaintenanceController::class, 'update'])->name('maintenance.update');
 });

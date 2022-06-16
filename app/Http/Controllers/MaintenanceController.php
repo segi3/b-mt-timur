@@ -14,8 +14,8 @@ class MaintenanceController extends Controller
         {
         if(request()->ajax()) {
             return datatables()->of(DB::table('maintenance')->select('*'))
-            // ->addColumn('action', 'maintenance.action')
-            // ->rawColumns(['action'])
+            ->addColumn('action', 'maintenance.action')
+            ->rawColumns(['action'])
             ->filter(function($instance) use ($request) {
                 if (!empty($request->get('bulan'))) {
                     $instance->whereRaw('MONTH(jadwal_maintenance) = '. $request->get('bulan'));
@@ -34,5 +34,30 @@ class MaintenanceController extends Controller
             ->make(true);
         }
         return view('maintenance.index');
+    }
+
+    public function edit(Maintenance $maintenance)
+    {
+        $user = DB::table('users')->where('role', 'teknisi')->get();
+        // dd($user);
+        return view('maintenance.edit',compact('maintenance', 'user'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        // $request->validate([
+        //     'no_id_user' => ['required', 'string', 'max:255'],
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'email' => ['required', 'string', 'email', 'max:255'],
+        //     'password' => ['sometimes', 'nullable', 'string', 'min:8'],
+        //     'role' => ['required', 'string', 'max:255'],
+        // ]);
+        // dd($request->all());
+        $mt = Maintenance::find($id);
+        $mt->status_pekerjaan = $request->status_pekerjaan;
+        $mt->nama_teknisi = $request->nama_teknisi;
+        $mt->save();
+        return redirect()->route('maintenance.index')
+            ->with('success','Maintenance berhasil diupdate');
     }
 }

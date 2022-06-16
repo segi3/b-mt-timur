@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('uraian_pekerjaan');
             $table->string('status_pekerjaan');
             $table->string('keterangan');
+            $table->string('nama_teknisi')->default('-');
 
             $table->unsignedBigInteger('utilitas_id')->nullable();
 

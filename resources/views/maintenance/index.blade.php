@@ -56,8 +56,9 @@
                         <th>Tanggal</th>
                         <th>Uraian Pekerjaan</th>
                         <th>Status</th>
+                        <th>Teknisi</th>
                         <th>Keterangan</th>
-                        {{-- <th>Action</th> --}}
+                        <th>Action</th>
                     </tr>
                 </thead>
             </table>
@@ -103,14 +104,18 @@
                     name: 'status_pekerjaan'
                 },
                 {
+                    data: 'nama_teknisi',
+                    name: 'nama_teknisi'
+                },
+                {
                     data: 'keterangan',
                     name: 'keterangan'
                 },
-                // {
-                //     data: 'action',
-                //     name: 'action',
-                //     orderable: false
-                // },
+                {
+                    data: 'action',
+                    name: 'action',
+                    orderable: false
+                },
             ],
             order: [
                 [0, 'desc']
