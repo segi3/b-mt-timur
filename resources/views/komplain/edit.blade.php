@@ -34,7 +34,7 @@
                         <option value="">Pilih Status</option>
                         <option value="Waiting">Waiting</option>
                         <option value="On Progress">On Progress</option>
-                        <option value="Completed">Completed</option>
+                        <option value="Complete">Complete</option>
                     </select>
                     @error('status_pekerjaan')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>

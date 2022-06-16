@@ -3,7 +3,7 @@
 @section('title', 'Gramedia Maintenance')
 
 @section('content_header')
-<h1 class="m-0 text-dark">Edit User</h1>
+<h1 class="m-0 text-dark">Edit Utilitas</h1>
 @stop
 
 @section('content')
@@ -69,10 +69,10 @@
                 <div class="form-group">
                     <strong>Status:</strong>
                     <select name="status_utilitas" class="form-control">
-                        <option value="Siap Pakai" {{ $utilita->role == 'Siap Pakai' ? 'selected' : '' }}>Siap Pakai
+                        <option value="Siap Operasional" {{ $utilita->role == 'Siap Operasional' ? 'selected' : '' }}>Siap Operasional
                         </option>
-                        <option value="Dalam Perbaikan" {{ $utilita->role == 'Dalam Perbaikan' ? 'selected' : '' }}>
-                            Dalam Perbaikan</option>
+                        <option value="Tidak Siap Operasional" {{ $utilita->role == 'Tidak Siap Operasional' ? 'selected' : '' }}>
+                            Tidak Siap Operasional</option>
                     </select>
                     @error('status_utilitas')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
