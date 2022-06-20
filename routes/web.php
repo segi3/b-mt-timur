@@ -41,6 +41,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('energy', [Controllers\UtilitasController::class, 'index']);
     Route::post('energy',  [Controllers\UtilitasController::class, 'upsert'])->name('energy.upsert');
     Route::get('energy/list',  [Controllers\UtilitasController::class, 'list'])->name('energy.list');
+    Route::get('energy/rekap',  [Controllers\UtilitasController::class, 'rekap'])->name('energy.rekap');
 
     // utilitas
     Route::resource('utilitas', Controllers\UtilitasCRUDController::class);
@@ -57,4 +58,5 @@ Route::middleware(['auth'])->group(function() {
     Route::post('maintenance', [Controllers\MaintenanceController::class, 'store'])->name('maintenance.store');
     Route::get('maintenance/{maintenance}/edit', [Controllers\MaintenanceController::class, 'edit'])->name('maintenance.edit');
     Route::put('maintenance/{maintenance}', [Controllers\MaintenanceController::class, 'update'])->name('maintenance.update');
+    Route::get('maintenance/rekap', [Controllers\MaintenanceController::class, 'rekap'])->name('maintenance.rekap');
 });

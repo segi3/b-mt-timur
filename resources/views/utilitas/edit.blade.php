@@ -75,58 +75,55 @@
                     <strong>No Util:</strong>
                     <select name="no_util" class="form-control">
                         <option value="-">Pilih</option>
-                        <option value="E124392 - E124348" {{ $utilita->no_util == 'Siap Operasional' ? 'selected' : '' }}>E124392 - E124348 - Elektrikal</option>
-                        <option value="E015214 - E014928" {{ $utilita->no_util == 'E015214 - E014928' ? 'selected' : '' }}>E015214 - E014928 - Elektrikal</option>
-                        <option value="E015214 - E014928" {{ $utilita->no_util == 'E015214 - E014928' ? 'selected' : '' }}>E015214 - E014928 - Elektrikal</option>
-                        <option value="E032020 - E038356" {{ $utilita->no_util == 'E032020 - E038356' ? 'selected' : '' }}>E032020 - E038356 - Elektrikal</option>
-                        <option value="E032458 -  E036665" {{ $utilita->no_util == 'E032458 -  E036665' ? 'selected' : '' }}>E032458 -  E036665 - Elektrikal</option>
-                        <option value="E001471 -  E000357" {{ $utilita->no_util == 'E001471 -  E000357' ? 'selected' : '' }}>E001471 -  E000357 - Elektrikal</option>
-                        <option value="E030675 -E015889" {{ $utilita->no_util == 'E030675 -E015889' ? 'selected' : '' }}>E030675 -E015889 - Elektrikal</option>
-                        <option value="E001471 - E00357" {{ $utilita->no_util == 'E001471 - E00357' ? 'selected' : '' }}>E001471 - E00357 - Elektrikal</option>
-                        <option value="E009456 - E009362" {{ $utilita->no_util == 'E009456 - E009362' ? 'selected' : '' }}>E009456 - E009362 - Elektrikal</option>
-                        <option value="E010063 - E009393" {{ $utilita->no_util == 'E010063 - E009393' ? 'selected' : '' }}>E010063 - E009393 - Elektrikal</option>
-                        <option value="JGBF5005F10017A" {{ $utilita->no_util == 'JGBF5005F10017A' ? 'selected' : '' }}>JGBF5005F10017A - Elektrikal</option>
-                        <option value="JGBF5005U10019A" {{ $utilita->no_util == 'JGBF5005U10019A' ? 'selected' : '' }}>JGBF5005U10019A - Elektrikal</option>
-                        <option value="52186037" {{ $utilita->no_util == '52186037' ? 'selected' : '' }}>52186037 - Elektrikal</option>
-                        <option value="1H1KT2000397"> {{ $utilita->no_util == '1H1KT2000397' ? 'selected' : '' }}1H1KT2000397 - Elektrikal</option>
-                        <option value="1H1KT1800883" {{ $utilita->no_util == '1H1KT1800883' ? 'selected' : '' }}>1H1KT1800883 - Elektrikal</option>
-                        <option value="1H1KT1800884" {{ $utilita->no_util == '1H1KT1800884' ? 'selected' : '' }}>1H1KT1800884 - Elektrikal</option>
-                        <option value="142090145" {{ $utilita->no_util == '142090145' ? 'selected' : '' }}>142090145 - Elektrikal</option>
-                        <option value="143082012" {{ $utilita->no_util == '143082012' ? 'selected' : '' }}>143082012 - Elektrikal</option>
-                        <option value="21J5U69158" {{ $utilita->no_util == '21J5U69158' ? 'selected' : '' }}>21J5U69158 - Elektrikal</option>
-                        <option value="21H568534" {{ $utilita->no_util == '21H568534' ? 'selected' : '' }}>21H568534 - Elektrikal</option>
-                        <option value="502725" {{ $utilita->no_util == '502725' ? 'selected' : '' }}>502725 - Elektrikal</option>
-                        <option value="502774" {{ $utilita->no_util == '502774' ? 'selected' : '' }}>502774 - Elektrikal</option>
-                        <option value="BC802-1/E;Z024500586779012" {{ $utilita->no_util == '5027BC802-1/E;Z02450058677901274' ? 'selected' : '' }}>BC802-1/E;Z024500586779012 - Elektrikal</option>
-
-                        <option value="400" {{ $utilita->no_util == '400' ? 'selected' : '' }}>400 - Mekanikal</option>
-                        <option value="401" {{ $utilita->no_util == '401' ? 'selected' : '' }}>401 - Mekanikal</option>
-                        <option value="00500F1931" {{ $utilita->no_util == '00500F1931' ? 'selected' : '' }}>00500F1931 - Mekanikal</option>
-                        <option value="BS121600" {{ $utilita->no_util == 'BS121600' ? 'selected' : '' }}>BS121600 - Mekanikal</option>
-                        <option value="FS2000" {{ $utilita->no_util == 'FS2000' ? 'selected' : '' }}>FS2000 - Mekanikal</option>
-                        <option value="HTC12001" {{ $utilita->no_util == 'HTC12001' ? 'selected' : '' }}>HTC12001 - Mekanikal</option>
-                        <option value="HTC21002" {{ $utilita->no_util == 'HTC21002' ? 'selected' : '' }}>HTC21002 - Mekanikal</option>
-                        <option value="HYD23001" {{ $utilita->no_util == 'HYD23001' ? 'selected' : '' }}>HYD23001 - Mekanikal</option>
-                        <option value="HYD32002" {{ $utilita->no_util == 'HYD32002' ? 'selected' : '' }}>HYD32002 - Mekanikal</option>
-                        <option value="HYD34001" {{ $utilita->no_util == 'HYD34001' ? 'selected' : '' }}>HYD34001 - Mekanikal</option>
-                        <option value="HYD43002" {{ $utilita->no_util == 'HYD43002' ? 'selected' : '' }}>HYD43002 - Mekanikal</option>
-
-                        <option value="MN50750-4" {{ $utilita->no_util == 'MN50750-4' ? 'selected' : '' }}>MN50750-4 - Plumbing</option>
-                        <option value="MN50750-12" {{ $utilita->no_util == 'MN50750-12' ? 'selected' : '' }}>MN50750-12 - Plumbing</option>
-                        <option value="85U051052314390123" {{ $utilita->no_util == '85U051052314390123' ? 'selected' : '' }}>85U051052314390123 - Plumbing</option>
-                        <option value="85U051052314390116" {{ $utilita->no_util == '85U051052314390116' ? 'selected' : '' }}>85U051052314390116 - Plumbing</option>
-                        <option value="1118542" {{ $utilita->no_util == '1118542' ? 'selected' : '' }}>1118542 - Plumbing</option>
-                        <option value="1113575" {{ $utilita->no_util == '1113575' ? 'selected' : '' }}>1113575 - Plumbing</option>
-                        <option value="1502012P40221" {{ $utilita->no_util == '1502012P40221' ? 'selected' : '' }}>1502012P40221 - Plumbing</option>
-                        <option value="1502012P40204" {{ $utilita->no_util == '1502012P40204' ? 'selected' : '' }}>1502012P40204 - Plumbing</option>
-                        <option value="65C5440036" {{ $utilita->no_util == '65C5440036' ? 'selected' : '' }}>65C5440036 - Plumbing</option>
-                        <option value="65C5440018" {{ $utilita->no_util == '65C5440018' ? 'selected' : '' }}>65C5440018 - Plumbing</option>
-                        <option value="65C5440046" {{ $utilita->no_util == '65C5440046' ? 'selected' : '' }}>65C5440046 - Plumbing</option>
-                        <option value="65C5440060" {{ $utilita->no_util == '65C5440060' ? 'selected' : '' }}>65C5440060 - Plumbing</option>
-                        <option value="65C5440088" {{ $utilita->no_util == '65C5440088' ? 'selected' : '' }}>65C5440088 - Plumbing</option>
-                        <option value="DD21357" {{ $utilita->no_util == 'DD21357' ? 'selected' : '' }}>DD21357 - Plumbing</option>
-                        <option value="ID280S-2" {{ $utilita->no_util == 'ID280S-2' ? 'selected' : '' }}>ID280S-2 - Plumbing</option>
-                        <option value="85415510" {{ $utilita->no_util == '85415510' ? 'selected' : '' }}>85415510 - Plumbing</option>
+                        <option value="E124392 - E124348" {{ $utilita->no_util == 'Siap Operasional' ? 'selected' : '' }}>E124392 - E124348 - Air Conditioner 2,5 pk</option>
+                        <option value="E015214 - E014928" {{ $utilita->no_util == 'E015214 - E014928' ? 'selected' : '' }}>E015214 - E014928 - Air Conditioner 2,5 pk</option>
+                        <option value="E032020 - E038356" {{ $utilita->no_util == 'E032020 - E038356' ? 'selected' : '' }}>E032020 - E038356 - Air Conditioner 2,5 pk</option>
+                        <option value="E032458 -  E036665" {{ $utilita->no_util == 'E032458 -  E036665' ? 'selected' : '' }}>E032458 -  E036665 - Air Conditioner 2,5 pk</option>
+                        <option value="E001471 -  E000357" {{ $utilita->no_util == 'E001471 -  E000357' ? 'selected' : '' }}>E001471 -  E000357 - Air Conditioner 2,5 pk</option>
+                        <option value="E030675 -E015889" {{ $utilita->no_util == 'E030675 -E015889' ? 'selected' : '' }}>E030675 -E015889 - Air Conditioner 2,5 pk</option>
+                        <option value="E009456 - E009362" {{ $utilita->no_util == 'E009456 - E009362' ? 'selected' : '' }}>E009456 - E009362 - Air Conditioner 2,5 pk</option>
+                        <option value="E010063 - E009393" {{ $utilita->no_util == 'E010063 - E009393' ? 'selected' : '' }}>E010063 - E009393 - Air Conditioner 2,5 pk</option>
+                        <option value="JGBF5005F10017A" {{ $utilita->no_util == 'JGBF5005F10017A' ? 'selected' : '' }}>JGBF5005F10017A - Genset</option>
+                        <option value="JGBF5005U10019A" {{ $utilita->no_util == 'JGBF5005U10019A' ? 'selected' : '' }}>JGBF5005U10019A - Genset</option>
+                        <option value="52186037" {{ $utilita->no_util == '52186037' ? 'selected' : '' }}>52186037 - Genset</option>
+                        <option value="1H1KT2000397"> {{ $utilita->no_util == '1H1KT2000397' ? 'selected' : '' }}1H1KT2000397 - UPS</option>
+                        <option value="1H1KT1800883" {{ $utilita->no_util == '1H1KT1800883' ? 'selected' : '' }}>1H1KT1800883 - UPS</option>
+                        <option value="1H1KT1800884" {{ $utilita->no_util == '1H1KT1800884' ? 'selected' : '' }}>1H1KT1800884 - UPS</option>
+                        <option value="142090145" {{ $utilita->no_util == '142090145' ? 'selected' : '' }}>142090145 - UPS</option>
+                        <option value="143082012" {{ $utilita->no_util == '143082012' ? 'selected' : '' }}>143082012 - UPS</option>
+                        <option value="21J5U69158" {{ $utilita->no_util == '21J5U69158' ? 'selected' : '' }}>21J5U69158 - AHU</option>
+                        <option value="21H568534" {{ $utilita->no_util == '21H568534' ? 'selected' : '' }}>21H568534 - AHU</option>
+                        <option value="502725" {{ $utilita->no_util == '502725' ? 'selected' : '' }}>502725 - AHU</option>
+                        <option value="502774" {{ $utilita->no_util == '502774' ? 'selected' : '' }}>502774 - AHU</option>
+                        <option value="BC802-1/E;Z024500586779012" {{ $utilita->no_util == '5027BC802-1/E;Z02450058677901274' ? 'selected' : '' }}>BC802-1/E;Z024500586779012 - Fire control</option>
+                        <option value="400" {{ $utilita->no_util == '400' ? 'selected' : '' }}>400 - Gondola</option>
+                        <option value="401" {{ $utilita->no_util == '401' ? 'selected' : '' }}>401 - Gondola</option>
+                        <option value="00500F1931" {{ $utilita->no_util == '00500F1931' ? 'selected' : '' }}>00500F1931 - Lift</option>
+                        <option value="BS121600" {{ $utilita->no_util == 'BS121600' ? 'selected' : '' }}>BS121600 - Lift</option>
+                        <option value="FS2000" {{ $utilita->no_util == 'FS2000' ? 'selected' : '' }}>FS2000 - Lift</option>
+                        <option value="HTC12001" {{ $utilita->no_util == 'HTC12001' ? 'selected' : '' }}>HTC12001 - Escalator</option>
+                        <option value="HTC21002" {{ $utilita->no_util == 'HTC21002' ? 'selected' : '' }}>HTC21002 - Escalator</option>
+                        <option value="HYD23001" {{ $utilita->no_util == 'HYD23001' ? 'selected' : '' }}>HYD23001 - Escalator</option>
+                        <option value="HYD32002" {{ $utilita->no_util == 'HYD32002' ? 'selected' : '' }}>HYD32002 - Escalator</option>
+                        <option value="HYD34001" {{ $utilita->no_util == 'HYD34001' ? 'selected' : '' }}>HYD34001 - Escalator</option>
+                        <option value="HYD43002" {{ $utilita->no_util == 'HYD43002' ? 'selected' : '' }}>HYD43002 - Escalator</option>
+                        <option value="MN50750-4" {{ $utilita->no_util == 'MN50750-4' ? 'selected' : '' }}>MN50750-4 - Pompa booster</option>
+                        <option value="MN50750-12" {{ $utilita->no_util == 'MN50750-12' ? 'selected' : '' }}>MN50750-12 - Pompa booster</option>
+                        <option value="85U051052314390123" {{ $utilita->no_util == '85U051052314390123' ? 'selected' : '' }}>85U051052314390123 - Pompa booster</option>
+                        <option value="85U051052314390116" {{ $utilita->no_util == '85U051052314390116' ? 'selected' : '' }}>85U051052314390116 - Pompa booster</option>
+                        <option value="504677" {{ $utilita->no_util == '504677' ? 'selected' : '' }}>504677 - Pompa Distribusi</option>
+                        <option value="1118542" {{ $utilita->no_util == '1118542' ? 'selected' : '' }}>1118542 - Pompa Distribusi</option>
+                        <option value="1113575" {{ $utilita->no_util == '1113575' ? 'selected' : '' }}>1113575 - Pompa Distribusi</option>
+                        <option value="1502012P40221" {{ $utilita->no_util == '1502012P40221' ? 'selected' : '' }}>1502012P40221 - Pompa Transfer</option>
+                        <option value="1502012P40204" {{ $utilita->no_util == '1502012P40204' ? 'selected' : '' }}>1502012P40204 - Pompa Transfer</option>
+                        <option value="65C5440036" {{ $utilita->no_util == '65C5440036' ? 'selected' : '' }}>65C5440036 - Pompa Cooling Tower</option>
+                        <option value="65C5440018" {{ $utilita->no_util == '65C5440018' ? 'selected' : '' }}>65C5440018 - Pompa Cooling Tower</option>
+                        <option value="65C5440046" {{ $utilita->no_util == '65C5440046' ? 'selected' : '' }}>65C5440046 - Pompa Cooling Tower</option>
+                        <option value="65C5440060" {{ $utilita->no_util == '65C5440060' ? 'selected' : '' }}>65C5440060 - Pompa Cooling Tower</option>
+                        <option value="65C5440088" {{ $utilita->no_util == '65C5440088' ? 'selected' : '' }}>65C5440088 - Pompa Cooling Tower</option>
+                        <option value="DD21357" {{ $utilita->no_util == 'DD21357' ? 'selected' : '' }}>DD21357 - Hydrant Diesel Pump</option>
+                        <option value="ID280S-2" {{ $utilita->no_util == 'ID280S-2' ? 'selected' : '' }}>ID280S-2 - Hydrant Electric Pump</option>
+                        <option value="85415510" {{ $utilita->no_util == '85415510' ? 'selected' : '' }}>85415510 - Hydrant Jockey Pump</option>
                     </select>
                     @error('no_util')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>

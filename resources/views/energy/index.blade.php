@@ -9,6 +9,9 @@
 @section('content')
 <div class="row">
     <div class="col-12">
+        <div class="pull-right mb-2">
+            <a class="btn btn-primary" href="{{ route('energy.rekap') }}">Rekap Konsumsi Energi</a>
+        </div>
         <div class="card">
             <form method="POST" action="{{ route('energy.upsert') }}">
                 @csrf
@@ -17,7 +20,8 @@
 
                     <div class="col-lg-4 row">
                         <div class="col-lg-12 d-flex justify-content-center">
-                            <i class="fas fa-fw fa-bolt fa-10x"></i>
+                            {{-- <i class="fas fa-fw fa-bolt fa-10x"></i> --}}
+                            <img src="{{ asset('img/energy-bolt.jpeg') }}" alt="" style="max-width: 150px;">
                         </div>
                         <div class="col-lg-12 d-flex justify-content-center">
 
@@ -36,7 +40,8 @@
 
                     <div class="col-lg-4 row">
                         <div class="col-lg-12 d-flex justify-content-center">
-                            <i class="fas fa-fw fa-water fa-10x"></i>
+                            {{-- <i class="fas fa-fw fa-water fa-10x"></i> --}}
+                            <img src="{{ asset('img/energy-water.jpeg') }}" alt="" style="max-width: 150px;">
                         </div>
                         <div class="col-lg-12 d-flex justify-content-center">
 
@@ -55,7 +60,8 @@
 
                     <div class="col-lg-4 row">
                         <div class="col-lg-12 d-flex justify-content-center">
-                            <i class="fas fa-fw fa-fire fa-10x"></i>
+                            {{-- <i class="fas fa-fw fa-fire fa-10x"></i> --}}
+                            <img src="{{ asset('img/energy-gas.jpeg') }}" alt="" style="max-width: 150px;">
                         </div>
                         <div class="col-lg-12 d-flex justify-content-center">
 
@@ -88,7 +94,7 @@
                             <th>Tanggal</th>
                             <th>Konsumsi Listrik (KWH)</th>
                             <th>Konsumsi Air (m3)</th>
-                            <th>KOnsumsi Gas (KG)</th>
+                            <th>Konsumsi Gas (KG)</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -10,10 +10,36 @@ use Carbon\Carbon;
 
 class MaintenanceController extends Controller
 {
-    public function index(Request $request)
-        {
+    public function rekap(Request $request) {
         if(request()->ajax()) {
-            return datatables()->of(DB::table('maintenance')->select('*'))
+            return datatables()->of(DB::table('maintenance')->where('status_pekerjaan', 'Complete')->select('*'))
+            // ->addColumn('action', 'maintenance.action')
+            // ->rawColumns(['action'])
+            ->filter(function($instance) use ($request) {
+                if (!empty($request->get('no_util'))) {
+                    $instance->where('no_util', 'like', '%' . $request->get('no_util') . '%');
+                }
+                if (!empty($request->get('search'))) {
+                    $instance->where(function($w) use($request){
+                       $search = $request->get('search');
+                       $w->orWhere('no_util', 'LIKE', "%$search%")
+                       ->orWhere('lokasi_utilitas', 'LIKE', "%$search%")
+                       ->orWhere('status_utilitas', 'LIKE', "%$search%")
+                       ->orWhere('keterangan', 'LIKE', "%$search%");
+                   });
+               }
+            })
+            ->addIndexColumn()
+            ->make(true);
+        }
+        $utilitas = DB::table('utilitas')->get();
+        return view('maintenance.rekap', compact('utilitas'));
+    }
+
+    public function index(Request $request)
+    {
+        if(request()->ajax()) {
+            return datatables()->of(DB::table('maintenance')->where('status_pekerjaan', '!=', 'Complete')->select('*'))
             ->addColumn('action', 'maintenance.action')
             ->rawColumns(['action'])
             ->filter(function($instance) use ($request) {

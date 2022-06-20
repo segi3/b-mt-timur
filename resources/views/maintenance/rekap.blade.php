@@ -7,7 +7,7 @@
 @section('title', 'Gramedia Maintenance')
 
 @section('content_header')
-<h1 class="m-0 text-dark">Maintenance</h1>
+<h1 class="m-0 text-dark">Rekap Maintenance Selesai</h1>
 @stop
 
 @section('content')
@@ -15,13 +15,9 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                {{-- <h2>Laravel 9 CRUD using DataTables Tutorial</h2> --}}
             </div>
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('maintenance.create') }}">Tambah Maintenance</a>
-            </div>
-            <div class="pull-right mb-2">
-                <a class="btn btn-primary" href="{{ route('maintenance.rekap') }}">Rekap Maintenance</a>
+                {{-- <a class="btn btn-success" href="{{ route('maintenance.create') }}">Tambah Maintenance</a> --}}
             </div>
         </div>
     </div>
@@ -33,21 +29,12 @@
     <div class="card">
         <div class="card-body">
             <div class="form-group">
-                <label><strong>Bulan :</strong></label>
+                <label><strong>Nomor Utilitas:</strong></label>
                 <select id='jenis-select' class="form-control" style="width: 200px">
                     <option value="">Semua</option>
-                    <option value="01">Januari</option>
-                    <option value="02">Februari</option>
-                    <option value="03">Maret</option>
-                    <option value="04">April</option>
-                    <option value="05">Mei</option>
-                    <option value="06">Juni</option>
-                    <option value="07">Juli</option>
-                    <option value="08">Agustus</option>
-                    <option value="09">September</option>
-                    <option value="10">Oktober</option>
-                    <option value="11">November</option>
-                    <option value="12">Desember</option>
+                    @foreach ($utilitas as $item)
+                        <option value="{{ $item->no_util }}">{{ $item->no_util }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -64,7 +51,7 @@
                         <th>Status</th>
                         <th>Teknisi</th>
                         <th>Keterangan</th>
-                        <th>Action</th>
+                        {{-- <th>Action</th> --}}
                     </tr>
                 </thead>
             </table>
@@ -87,9 +74,9 @@
             serverSide: true,
             searching: false,
             ajax: {
-                url: "{{ url('maintenance') }}",
+                url: "{{ url('maintenance/rekap') }}",
                 data: function(d) {
-                    d.bulan = $('#jenis-select').val(),
+                    d.no_util = $('#jenis-select').val(),
                     d.search = $('input[type="search"]').val()
                 }
             },
@@ -117,11 +104,11 @@
                     data: 'keterangan',
                     name: 'keterangan'
                 },
-                {
-                    data: 'action',
-                    name: 'action',
-                    orderable: false
-                },
+                // {
+                //     data: 'action',
+                //     name: 'action',
+                //     orderable: false
+                // },
             ],
             order: [
                 [0, 'desc']
