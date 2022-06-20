@@ -53,6 +53,8 @@ Route::middleware(['auth'])->group(function() {
     Route::put('komplain/{komplain}', [Controllers\KomplainCRUDController::class, 'update'])->name('komplain.update');
 
     Route::get('maintenance', [Controllers\MaintenanceController::class, 'index'])->name('maintenance.index');
+    Route::get('maintenance/create', [Controllers\MaintenanceController::class, 'create'])->name('maintenance.create');
+    Route::post('maintenance', [Controllers\MaintenanceController::class, 'store'])->name('maintenance.store');
     Route::get('maintenance/{maintenance}/edit', [Controllers\MaintenanceController::class, 'edit'])->name('maintenance.edit');
     Route::put('maintenance/{maintenance}', [Controllers\MaintenanceController::class, 'update'])->name('maintenance.update');
 });

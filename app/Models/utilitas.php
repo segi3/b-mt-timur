@@ -9,12 +9,15 @@ class Utilitas extends Model
 {
     use HasFactory;
 
+    protected $table = 'utilitas';
+
     protected $fillable = [
         'no_util',
         'tanggal',
-        'jenis_utlitas',
-        'lokasi_utlitas',
+        'jenis_utilitas',
+        'lokasi_utilitas',
         'status_utilitas',
+        'bidang_utilitas',
         'keterangan'
     ];
 }

@@ -34,6 +34,34 @@ class UtilitasCRUDController extends Controller
         return view('utilitas.index');
     }
 
+    public function create()
+    {
+         return view('utilitas.create');
+    }
+
+    public function store(Request $request)
+    {
+        // $request->validate([
+        //     'no_id_user' => ['required', 'string', 'max:255'],
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        //     'password' => ['required', 'string', 'min:8'],
+        //     'role' => ['required', 'string', 'max:255'],
+        // ]);
+        // dd($request->all());
+        Utilitas::create([
+            'no_util' => $request->no_util,
+            'tanggal' => $request->tanggal,
+            'bidang_utilitas' => $request->bidang_utilitas,
+            'jenis_utilitas' => $request->jenis_utilitas,
+            'status_utilitas' => $request->status_utilitas,
+            'lokasi_utilitas' => $request->lokasi_utilitas,
+            'keterangan' => $request->keterangan
+        ]);
+        return redirect()->route('utilitas.index')
+            ->with('success','Utilitas berhasil ditambahkan.');
+    }
+
     public function edit(Utilitas $utilita)
     {
         return view('utilitas.edit',compact('utilita'));

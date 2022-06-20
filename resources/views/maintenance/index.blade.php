@@ -17,6 +17,9 @@
             <div class="pull-left">
                 {{-- <h2>Laravel 9 CRUD using DataTables Tutorial</h2> --}}
             </div>
+            <div class="pull-right mb-2">
+                <a class="btn btn-success" href="{{ route('maintenance.create') }}">Tambah Maintenance</a>
+            </div>
         </div>
     </div>
     @if ($message = Session::get('success'))

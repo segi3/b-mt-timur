@@ -36,6 +36,37 @@ class MaintenanceController extends Controller
         return view('maintenance.index');
     }
 
+    public function create()
+    {
+        $utilitas = DB::table('utilitas')->get();
+        return view('maintenance.create', compact('utilitas'));
+    }
+
+    public function store(Request $request)
+    {
+        // $request->validate([
+        //     'no_id_user' => ['required', 'string', 'max:255'],
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        //     'password' => ['required', 'string', 'min:8'],
+        //     'role' => ['required', 'string', 'max:255'],
+        // ]);
+        // dd($request->all());
+        $util = explode("::", $request->no_util);
+        // dd($util);
+        Maintenance::create([
+            'no_util' => $util[0],
+            'jadwal_maintenance' => $request->jadwal_maintenance,
+            'uraian_pekerjaan' => $request->uraian_pekerjaan,
+            'status_pekerjaan' => $request->status_pekerjaan,
+            'keterangan' => $request->keterangan,
+            'nama_teknisi' => $request->nama_teknisi,
+            'utilitas_id'=> $util[1]
+        ]);
+        return redirect()->route('maintenance.index')
+            ->with('success','Maintenance berhasil ditambahkan.');
+    }
+
     public function edit(Maintenance $maintenance)
     {
         $user = DB::table('users')->where('role', 'teknisi')->get();
