@@ -69,9 +69,10 @@ class MaintenanceController extends Controller
 
     public function edit(Maintenance $maintenance)
     {
+        $utilitas = DB::table('utilitas')->get();
         $user = DB::table('users')->where('role', 'teknisi')->get();
         // dd($user);
-        return view('maintenance.edit',compact('maintenance', 'user'));
+        return view('maintenance.edit',compact('maintenance', 'user', 'utilitas'));
     }
 
     public function update(Request $request, $id)
