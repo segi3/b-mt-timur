@@ -38,7 +38,7 @@ Route::middleware(['auth'])->group(function() {
     Route::post('delete-user', [Controllers\UserCRUDController::class, 'destroy']);
 
     // energy
-    Route::get('energy', [Controllers\UtilitasController::class, 'index']);
+    Route::get('energy', [Controllers\UtilitasController::class, 'index'])->name('energy.index');
     Route::post('energy',  [Controllers\UtilitasController::class, 'upsert'])->name('energy.upsert');
     Route::get('energy/list',  [Controllers\UtilitasController::class, 'list'])->name('energy.list');
     Route::get('energy/rekap',  [Controllers\UtilitasController::class, 'rekap'])->name('energy.rekap');

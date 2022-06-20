@@ -19,10 +19,10 @@
             </div>
             {{-- <div class="pull-right mb-2">
                 <a class="btn btn-success" href="{{ route('maintenance.create') }}">Tambah Maintenance</a>
-            </div>
-            <div class="pull-right mb-2">
-                <a class="btn btn-primary" href="{{ route('maintenance.rekap') }}">Rekap Maintenance</a>
             </div> --}}
+            <div class="pull-right mb-2">
+                <a class="btn btn-primary" href="{{ route('energy.index') }}">Kembali</a>
+            </div>
         </div>
     </div>
     @if ($message = Session::get('success'))
