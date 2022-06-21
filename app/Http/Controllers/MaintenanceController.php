@@ -64,7 +64,7 @@ class MaintenanceController extends Controller
 
     public function create()
     {
-        $utilitas = DB::table('utilitas')->get();
+        $utilitas = DB::table('utilitas')->orderBy('jenis_utilitas')->get();
         return view('maintenance.create', compact('utilitas'));
     }
 

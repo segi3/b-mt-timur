@@ -33,11 +33,9 @@
                 <label><strong>Jenis Utilitas :</strong></label>
                 <select id='jenis-select' class="form-control" style="width: 200px">
                     <option value="">Semua</option>
-                    <option value="AC Split 2,5PK">AC Split 2,5PK</option>
-                    <option value="Genset">Genset</option>
-                    <option value="UPS">UPS</option>
-                    <option value="AHU">AHU</option>
-                    <option value="Fire Alarm">Fire Alarm</option>
+                    @foreach ($util as $item)
+                        <option value="{{ $item->jenis_utilitas }}">{{ $item->jenis_utilitas }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>

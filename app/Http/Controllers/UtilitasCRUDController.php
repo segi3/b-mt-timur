@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Utilitas;
 use Illuminate\Http\Request;
 use Datatables;
+use Illuminate\Support\Facades\DB;
 
 class UtilitasCRUDController extends Controller
 {
@@ -31,7 +32,9 @@ class UtilitasCRUDController extends Controller
             })
             ->make(true);
         }
-        return view('utilitas.index');
+        $util = DB::table('utilitas')->select('jenis_utilitas')->distinct()->get();
+        // dd($util);
+        return view('utilitas.index', compact('util'));
     }
 
     public function create()
