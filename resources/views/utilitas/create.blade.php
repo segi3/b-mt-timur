@@ -59,9 +59,9 @@
                         <option value="Pompa Boster" >Pompa Boster</option>
                         <option value="Pompa Distribusi" >Pompa Distribusi</option>
                         <option value="Pompa Transfer" >Pompa Transfer</option>
-                        <option value="Pompa Cooling Tower" >j>Pompa Cooling Tower</option>
-                        <option value="Pompa Hydrant Diesel" >je>Pompa Hydrant Diesel</option>
-                        <option value="Pompa Hydrant Elektrik" >jeni>Pompa Hydrant Elektrik</option>
+                        <option value="Pompa Cooling Tower" >Pompa Cooling Tower</option>
+                        <option value="Pompa Hydrant Diesel" >Pompa Hydrant Diesel</option>
+                        <option value="Pompa Hydrant Elektrik" >Pompa Hydrant Elektrik</option>
                         <option value="Pompa Jokey" >Pompa Jokey</option>
                     </select>
                     @error('jenis_utilitas')
