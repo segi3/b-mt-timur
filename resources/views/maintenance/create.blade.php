@@ -31,7 +31,7 @@
                     <select name="no_util" class="form-control">
                         <option value="-" disabled selected>Pilih Utilitas</option>
                         @foreach ($utilitas as $item)
-                        <option value="{{ $item->no_util . "::" . $item->id }}">{{ $item->no_util }}</option>
+                        <option value="{{ $item->no_util . "::" . $item->id }}">{{ $item->no_util . " - " . $item->jenis_utilitas }}</option>
                         @endforeach
                     </select>
                     @error('no_util')
