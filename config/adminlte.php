@@ -253,7 +253,7 @@ return [
         //     'label'       => 4,
         //     'label_color' => 'success',
         // ],
-        ['header' => 'AKUN'],
+        ['header' => 'HOME'],
         [
             'text' => 'Home',
             'url'  => 'home',
@@ -272,7 +272,7 @@ return [
             'can'  => ['isSupervisor', 'isManager'],
         ],
 
-        ['header' => 'OPERASIONAL'],
+        ['header' => 'MENU'],
         [
             'text' => 'Pengunaan Energi',
             'url'  => 'energy',
