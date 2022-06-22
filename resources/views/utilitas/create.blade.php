@@ -29,10 +29,10 @@
                 <div class="form-group">
                     <strong>Bidang Utilitas:</strong>
                     <select name="bidang_utilitas" class="form-control">
-                        <option value="-"disabled selected>Pilih Bidang</option>
+                        <option value="-" disabled selected>Pilih Bidang</option>
                         <option value="Elektrikal">Elektrikal</option>
                         <option value="Mekanikal">Mekanikal</option>
-                        <option value="Plumbing" >Plumbing</option>
+                        <option value="Plumbing">Plumbing</option>
                     </select>
                     @error('bidang_utilitas')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -44,43 +44,43 @@
                 <div class="form-group">
                     <strong>Jenis Utilitas:</strong>
                     <select name="jenis_utilitas" class="form-control">
-                        <option value="-"disabled selected>Pilih Jenis</option>
+                        <option value="-" disabled selected>Pilih Jenis</option>
 
-                        <option value="AC Split 2,5PK" >AC Split 2,5PK</option>
-                        <option value="Genset" >Genset </option>
-                        <option value="UPS" >UPS</option>
-                        <option value="AHU" >AHU</option>
-                        <option value="Fire Alarm" >Fire Alarm</option>
+                        <option value="AC Split 2,5PK">AC Split 2,5PK</option>
+                        <option value="Genset">Genset </option>
+                        <option value="UPS">UPS</option>
+                        <option value="AHU">AHU</option>
+                        <option value="Fire Alarm">Fire Alarm</option>
 
-                        <option value="Gondola" >Gondola</option>
+                        <option value="Gondola">Gondola</option>
                         <option value="Lift">Lift</option>
-                        <option value="Escalator" >Escalator</option>
+                        <option value="Escalator">Escalator</option>
 
-                        <option value="Pompa Boster" >Pompa Boster</option>
-                        <option value="Pompa Distribusi" >Pompa Distribusi</option>
-                        <option value="Pompa Transfer" >Pompa Transfer</option>
-                        <option value="Pompa Cooling Tower" >Pompa Cooling Tower</option>
-                        <option value="Pompa Hydrant Diesel" >Pompa Hydrant Diesel</option>
-                        <option value="Pompa Hydrant Elektrik" >Pompa Hydrant Elektrik</option>
-                        <option value="Pompa Jokey" >Pompa Jokey</option>
+                        <option value="Pompa Boster">Pompa Boster</option>
+                        <option value="Pompa Distribusi">Pompa Distribusi</option>
+                        <option value="Pompa Transfer">Pompa Transfer</option>
+                        <option value="Pompa Cooling Tower">Pompa Cooling Tower</option>
+                        <option value="Pompa Hydrant Diesel">Pompa Hydrant Diesel</option>
+                        <option value="Pompa Hydrant Elektrik">Pompa Hydrant Elektrik</option>
+                        <option value="Pompa Jokey">Pompa Jokey</option>
                     </select>
                     @error('jenis_utilitas')
-        </div>
+                    {{-- </div> --}}
                     @enderror
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            {{-- <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>No Util:</strong>
                     <select name="no_util" class="form-control">
                         <option value="-">Pilih</option>
                         <option value="E124392 - E124348">E124392 - E124348 - Elektrikal</option>
-                        <option value="E015214 - E014928" >E015214 - E014928 - Elektrikal</option>
-                        <option value="E015214 - E014928" >E015214 - E014928 - Elektrikal</option>
-                        <option value="E032020 - E038356" >E032020 - E038356 - Elektrikal</option>
-                        <option value="E032458 -  E036665" E032458 -  E03>E032458 -  E036665 - Elektrikal</option>
-                        <option value="E001471 -  E000357" E001471 -  E00>E001471 -  E000357 - Elektrikal</option>
+                        <option value="E015214 - E014928">E015214 - E014928 - Elektrikal</option>
+                        <option value="E015214 - E014928">E015214 - E014928 - Elektrikal</option>
+                        <option value="E032020 - E038356">E032020 - E038356 - Elektrikal</option>
+                        <option value="E032458 -  E036665" E032458 - E03>E032458 - E036665 - Elektrikal</option>
+                        <option value="E001471 -  E000357" E001471 - E00>E001471 - E000357 - Elektrikal</option>
                         <option value="E030675 -E015889" E030675 -E01>E030675 -E015889 - Elektrikal</option>
                         <option value="E001471 - E00357" E001471 - E0>E001471 - E00357 - Elektrikal</option>
                         <option value="E009456 - E009362" E009456 - E00>E009456 - E009362 - Elektrikal</option>
@@ -97,9 +97,9 @@
                         <option value="21H568534" 21H56>21H568534 - Elektrikal</option>
                         <option value="502725" 50>502725 - Elektrikal</option>
                         <option value="502774" 50>502774 - Elektrikal</option>
-                        <option value="BC802-1/E;Z024500586779012" 5027BC802-1/E;Z0245005867790>BC802-1/E;Z024500586779012 - Elektrikal</option>
-
-                        <option value="400">400 - Mekanikal</option>
+                        <option value="BC802-1/E;Z024500586779012"
+                            5027BC802-1/E;Z0245005867790>BC802-1/E;Z024500586779012 - Elektrikal</option> <option
+                            value="400">400 - Mekanikal</option>
                         <option value="401">401 - Mekanikal</option>
                         <option value="00500F1931" 00500F>00500F1931 - Mekanikal</option>
                         <option value="BS121600" BS12>BS121600 - Mekanikal</option>
@@ -132,6 +132,16 @@
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
                 </div>
+            </div> --}}
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Nomor Utilitas:</strong>
+                    <input type="text" name="no_util" class="form-control" placeholder="no_util"
+                        value=''>
+                    @error('no_util')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
@@ -146,8 +156,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Keterangan:</strong>
-                    <input type="text" name="keterangan" class="form-control" placeholder="keterangan"
-                        value=''>
+                    <input type="text" name="keterangan" class="form-control" placeholder="keterangan" value=''>
                     @error('keterangan')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
@@ -156,7 +165,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Tanggal:</strong>
-                    <input type="text" name="tanggal" value="" class="form-control"/>
+                    <input type="text" name="tanggal" value="" class="form-control" />
                 </div>
             </div>
 

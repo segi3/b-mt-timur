@@ -54,6 +54,8 @@
                         <option value="Mekanikal">Mekanikal</option>
                         <option value="Elektrikal">Elektrikal</option>
                         <option value="Arsitektur">Arsitektur</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Sipil">Sipil</option>
                     </select>
                     @error('bidang_pekerjaan')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
