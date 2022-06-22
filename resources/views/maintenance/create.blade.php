@@ -25,7 +25,7 @@
     <form action="{{ route('maintenance.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            {{-- <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nomor Utilitas:</strong>
                     <select name="no_util" class="form-control">
@@ -34,6 +34,16 @@
                         <option value="{{ $item->no_util . "::" . $item->id }}">{{ $item->no_util . " - " . $item->jenis_utilitas }}</option>
                         @endforeach
                     </select>
+                    @error('no_util')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div> --}}
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Nomor Utilitas:</strong>
+                    <input type="text" name="no_util" class="form-control" placeholder="no_util"
+                        value=''>
                     @error('no_util')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror

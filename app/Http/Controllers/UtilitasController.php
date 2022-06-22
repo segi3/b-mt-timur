@@ -70,7 +70,7 @@ class UtilitasController extends Controller
                 'konsumsi_listrik' => $request->konsumsi_listrik,
                 'konsumsi_air' =>$request->konsumsi_air,
                 'konsumsi_gas' =>$request->konsumsi_gas,
-                'tanggal' => Carbon::now()->format('Y-m-d')
+                'tanggal' => $request->tanggal
             ]);
         }
 
