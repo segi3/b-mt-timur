@@ -40,7 +40,8 @@ class UtilitasCRUDController extends Controller
 
     public function create()
     {
-         return view('utilitas.create');
+        $user = DB::table('users')->where('role', 'teknisi')->get();
+         return view('utilitas.create', compact('user'));
     }
 
     public function store(Request $request)
@@ -69,7 +70,8 @@ class UtilitasCRUDController extends Controller
 
     public function edit(Utilitas $utilita)
     {
-        return view('utilitas.edit',compact('utilita'));
+        $user = DB::table('users')->where('role', 'teknisi')->get();
+        return view('utilitas.edit',compact('utilita', 'user'));
     }
 
     public function update(Request $request, $id)

@@ -156,7 +156,7 @@
                     <input type="text" name="tanggal" value="" class="form-control"/>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            {{-- <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Teknisi:</strong>
                     <select name="nama_teknisi" class="form-control">
@@ -164,6 +164,20 @@
                         <option value="Tim A" {{ $utilita->nama_teknisi == 'Tim A' ? 'selected' : '' }} >Tim A</option>
                         <option value="Tim B" {{ $utilita->nama_teknisi == 'Tim B' ? 'selected' : '' }} >Tim B</option>
                         <option value="Vendor" {{ $utilita->nama_teknisi == 'Vendor' ? 'selected' : '' }}>Vendor</option>
+                    </select>
+                    @error('nama_teknisi')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div> --}}
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Teknisi:</strong>
+                    <select name="nama_teknisi" class="form-control">
+                        <option value="">Pilih Teknisi</option>
+                        @foreach ($user as $u)
+                            <option value="{{ $u->name }}" {{ $utilita->nama_teknisi == $u->name ? 'selected' : '' }}>{{ $u->name }}</option>
+                        @endforeach
                     </select>
                     @error('nama_teknisi')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
