@@ -26,7 +26,8 @@ class UtilitasCRUDController extends Controller
                        $w->orWhere('no_util', 'LIKE', "%$search%")
                        ->orWhere('lokasi_utilitas', 'LIKE', "%$search%")
                        ->orWhere('status_utilitas', 'LIKE', "%$search%")
-                       ->orWhere('keterangan', 'LIKE', "%$search%");
+                       ->orWhere('keterangan', 'LIKE', "%$search%")
+                       ->orWhere('nama_teknisi', 'LIKE', "%$search%");
                    });
                }
             })
@@ -59,7 +60,8 @@ class UtilitasCRUDController extends Controller
             'jenis_utilitas' => $request->jenis_utilitas,
             'status_utilitas' => $request->status_utilitas,
             'lokasi_utilitas' => $request->lokasi_utilitas,
-            'keterangan' => $request->keterangan
+            'keterangan' => $request->keterangan,
+            'nama_teknisi' => $request->nama_teknisi
         ]);
         return redirect()->route('utilitas.index')
             ->with('success','Utilitas berhasil ditambahkan.');
@@ -88,6 +90,7 @@ class UtilitasCRUDController extends Controller
         $util->keterangan = $request->keterangan;
         $util->tanggal = $request->tanggal;
         $util->bidang_utilitas = $request->bidang_utilitas;
+        $util->nama_teknisi = $request->nama_teknisi;
         $util->save();
 
         return redirect()->route('utilitas.index')

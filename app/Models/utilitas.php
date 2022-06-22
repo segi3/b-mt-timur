@@ -18,6 +18,7 @@ class Utilitas extends Model
         'lokasi_utilitas',
         'status_utilitas',
         'bidang_utilitas',
-        'keterangan'
+        'keterangan',
+        'nama_teknisi'
     ];
 }

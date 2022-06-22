@@ -168,7 +168,20 @@
                     <input type="text" name="tanggal" value="" class="form-control" />
                 </div>
             </div>
-
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Teknisi:</strong>
+                    <select name="nama_teknisi" class="form-control">
+                        <option value="-">Pilih Tim</option>
+                        <option value="Tim A"  >Tim A</option>
+                        <option value="Tim B"  >Tim B</option>
+                        <option value="Vendor" >Vendor</option>
+                    </select>
+                    @error('nama_teknisi')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">

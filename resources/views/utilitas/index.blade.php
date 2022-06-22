@@ -49,6 +49,7 @@
                         <th>No Utilitas</th>
                         <th>Lokasi Utilitas</th>
                         <th>Waktu Tanggal</th>
+                        <th>Nama Teknisi</th>
                         <th>Status Utilitas</th>
                         <th>Keterangan</th>
                         <th>Action</th>
@@ -91,6 +92,10 @@
                 {
                     data: 'tanggal',
                     name: 'tanggal'
+                },
+                {
+                    data: 'nama_teknisi',
+                    name: 'nama_teknisi'
                 },
                 {
                     data: 'status_utilitas',
