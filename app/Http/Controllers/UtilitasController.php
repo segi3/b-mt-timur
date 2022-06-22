@@ -55,10 +55,10 @@ class UtilitasController extends Controller
     public function upsert(Request $request) {
 
         // dd($request);
-        $util = DB::table('konsumsi_energi')->whereDate('tanggal',  DB::raw('CURDATE()'))->first();
+        $util = DB::table('konsumsi_energi')->whereDate('tanggal',  $request->tanggal)->first();
 
         if($util){
-            DB::table('konsumsi_energi')->whereDate('tanggal',  DB::raw('CURDATE()'))->update([
+            DB::table('konsumsi_energi')->whereDate('tanggal',  $request->tanggal)->update([
                 'konsumsi_listrik' => $request->konsumsi_listrik,
                 'konsumsi_air' =>$request->konsumsi_air,
                 'konsumsi_gas' =>$request->konsumsi_gas,
