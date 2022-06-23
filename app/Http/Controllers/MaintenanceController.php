@@ -87,7 +87,7 @@ class MaintenanceController extends Controller
             'status_pekerjaan' => $request->status_pekerjaan,
             'keterangan' => $request->keterangan,
             'nama_teknisi' => $request->nama_teknisi,
-            'utilitas_id'=> 9999 // use explode and $util[1] if use dropdown
+            'utilitas_id'=> null // use explode and $util[1] if use dropdown
         ]);
         return redirect()->route('maintenance.index')
             ->with('success','Maintenance berhasil ditambahkan.');

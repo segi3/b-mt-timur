@@ -27,7 +27,7 @@ return new class extends Migration
 
             $table->timestamps();
 
-            $table->foreign('utilitas_id')->references('id')->on('utilitas');
+            $table->foreign('utilitas_id')->references('id')->on('utilitas')->nullable();
         });
     }
 
