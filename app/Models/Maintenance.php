@@ -14,6 +14,7 @@ class Maintenance extends Model
     protected $fillable = [
         'no_util', 'jadwal_maintenance',
         'uraian_pekerjaan', 'status_pekerjaan',
-        'keterangan', 'utilitas_id', 'nama_teknisi'
+        'keterangan', 'utilitas_id', 'nama_teknisi',
+        'lokasi'
     ];
 }

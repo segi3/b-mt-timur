@@ -60,6 +60,7 @@
                     <tr>
                         <th>No Utilitas</th>
                         <th>Tanggal</th>
+                        <th>Lokasi</th>
                         <th>Uraian Pekerjaan</th>
                         <th>Status</th>
                         <th>Teknisi</th>
@@ -100,6 +101,10 @@
                 {
                     data: 'jadwal_maintenance',
                     name: 'jadwal_maintenance'
+                },
+                {
+                    data: 'lokasi',
+                    name: 'lokasi'
                 },
                 {
                     data: 'uraian_pekerjaan',

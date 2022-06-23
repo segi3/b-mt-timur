@@ -87,7 +87,8 @@ class MaintenanceController extends Controller
             'status_pekerjaan' => $request->status_pekerjaan,
             'keterangan' => $request->keterangan,
             'nama_teknisi' => $request->nama_teknisi,
-            'utilitas_id'=> null // use explode and $util[1] if use dropdown
+            'utilitas_id'=> null, // use explode and $util[1] if use dropdown,
+            'lokasi' => $request->lokasi
         ]);
         return redirect()->route('maintenance.index')
             ->with('success','Maintenance berhasil ditambahkan.');
@@ -112,8 +113,13 @@ class MaintenanceController extends Controller
         // ]);
         // dd($request->all());
         $mt = Maintenance::find($id);
+        $mt->no_util = $request->no_util;
+        $mt->jadwal_maintenance = $request->jadwal_maintenance;
+        $mt->uraian_pekerjaan = $request->uraian_pekerjaan;
+        $mt->keterangan = $request->keterangan;
         $mt->status_pekerjaan = $request->status_pekerjaan;
         $mt->nama_teknisi = $request->nama_teknisi;
+        $mt->lokasi = $request->lokasi;
         $mt->save();
         return redirect()->route('maintenance.index')
             ->with('success','Maintenance berhasil diupdate');
