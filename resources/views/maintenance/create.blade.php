@@ -100,8 +100,10 @@
                     <strong>Teknisi:</strong>
                     <select name="nama_teknisi" class="form-control">
                         <option value="-">Pilih Tim</option>
-                        <option value="Tim A"  >Tim A</option>
-                        <option value="Tim B" >Tim B</option>
+                        <option value="Tim A1">Tim A1</option>
+                        <option value="Tim A2">Tim A2</option>
+                        <option value="Tim B1">Tim B1</option>
+                        <option value="Tim B2">Tim B2</option>
                         <option value="Vendor">Vendor</option>
                     </select>
                     @error('nama_teknisi')
