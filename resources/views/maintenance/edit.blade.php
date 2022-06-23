@@ -27,7 +27,7 @@
         @csrf
         @method('PUT')
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            {{-- <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nomor Utilitas:</strong>
                     <select name="no_util" class="form-control">
@@ -36,6 +36,16 @@
                         <option value="{{ $item->no_util . "::" . $item->id }}">{{ $item->no_util }}</option>
                         @endforeach
                     </select>
+                    @error('no_util')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div> --}}
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Nomor Utilitas:</strong>
+                    <input type="text" name="no_util" class="form-control" placeholder="no_util"
+                        value=''>
                     @error('no_util')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
@@ -92,8 +102,10 @@
                     <strong>Teknisi:</strong>
                     <select name="nama_teknisi" class="form-control">
                         <option value="-">Pilih Tim</option>
-                        <option value="Tim A" {{ $maintenance->nama_teknisi == 'Tim A' ? 'selected' : '' }} >Tim A</option>
-                        <option value="Tim B" {{ $maintenance->nama_teknisi == 'Tim B' ? 'selected' : '' }} >Tim B</option>
+                        <option value="Tim A1" {{ $maintenance->nama_teknisi == 'Tim A1' ? 'selected' : '' }} >Tim A1</option>
+                        <option value="Tim A2" {{ $maintenance->nama_teknisi == 'Tim A2' ? 'selected' : '' }} >Tim A2</option>
+                        <option value="Tim B1" {{ $maintenance->nama_teknisi == 'Tim B1' ? 'selected' : '' }} >Tim B1</option>
+                        <option value="Tim B2" {{ $maintenance->nama_teknisi == 'Tim B2' ? 'selected' : '' }} >Tim B2</option>
                         <option value="Vendor" {{ $maintenance->nama_teknisi == 'Vendor' ? 'selected' : '' }}>Vendor</option>
                     </select>
                     @error('nama_teknisi')
