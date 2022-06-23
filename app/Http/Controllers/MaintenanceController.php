@@ -81,13 +81,13 @@ class MaintenanceController extends Controller
         $util = explode("::", $request->no_util);
         // dd($util);
         Maintenance::create([
-            'no_util' => $util[0],
+            'no_util' => $request->no_util, // use explode and $util[1] if use dropdown
             'jadwal_maintenance' => $request->jadwal_maintenance,
             'uraian_pekerjaan' => $request->uraian_pekerjaan,
             'status_pekerjaan' => $request->status_pekerjaan,
             'keterangan' => $request->keterangan,
             'nama_teknisi' => $request->nama_teknisi,
-            'utilitas_id'=> $util[1]
+            'utilitas_id'=> 9999 // use explode and $util[1] if use dropdown
         ]);
         return redirect()->route('maintenance.index')
             ->with('success','Maintenance berhasil ditambahkan.');
