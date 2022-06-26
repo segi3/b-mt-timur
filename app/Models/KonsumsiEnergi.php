@@ -11,6 +11,6 @@ class KonsumsiEnergi extends Model
 
     protected $fillable = [
         'konsumsi_air', 'konsumsi_air', 'konsumsi_gas',
-        'tanggal'
+        'tanggal', 'keterangan'
     ];
 }

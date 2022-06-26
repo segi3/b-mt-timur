@@ -69,7 +69,7 @@
                             </div>
                         <div class="col-lg-12 d-flex justify-content-center">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Konsumsi Gas" value="{{ $util->konsumsi_listrik }}"
+                                <input type="text" class="form-control" placeholder="Konsumsi Gas" value="{{ $util->konsumsi_gas }}"
                                     aria-label="Konsumsi Gas" aria-describedby="basic-addon4" name="konsumsi_gas">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon4">KG</span>
@@ -78,10 +78,17 @@
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <strong>Jadwal Maintenance:</strong>
                             <input type="text" name="tanggal" value="" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <strong>Keterangan:</strong>
+                            <input type="text" name="keterangan" class="form-control" value="{{ $util->keterangan }}"/>
                         </div>
                     </div>
 
@@ -101,7 +108,8 @@
                             <th>Tanggal</th>
                             <th>Konsumsi Listrik (KWH)</th>
                             <th>Konsumsi Air (m3)</th>
-                            <th>Konsumsi Gas (KG)</th>
+                            <th>Konsumsi Gas (Bar)</th>
+                            <th>Keterangan</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -158,6 +166,9 @@
                 {
                     data: 'konsumsi_gas',
                     name: 'konsumsi_gas'
+                }, {
+                    data: 'keterangan',
+                    name: 'keterangan'
                 }
             ],
             order: [

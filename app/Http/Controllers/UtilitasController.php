@@ -18,8 +18,9 @@ class UtilitasController extends Controller
             $util->konsumsi_listrik = 0;
             $util->konsumsi_air = 0;
             $util->konsumsi_gas = 0;
+            $util->keterangan = '-';
         }
-
+        // dd($util);
         return view('energy.index')->with('util', $util);
     }
 
@@ -62,6 +63,7 @@ class UtilitasController extends Controller
                 'konsumsi_listrik' => $request->konsumsi_listrik,
                 'konsumsi_air' =>$request->konsumsi_air,
                 'konsumsi_gas' =>$request->konsumsi_gas,
+                'keterangan'=>$request->keterangan
             ]);
 
         } else {
@@ -70,7 +72,8 @@ class UtilitasController extends Controller
                 'konsumsi_listrik' => $request->konsumsi_listrik,
                 'konsumsi_air' =>$request->konsumsi_air,
                 'konsumsi_gas' =>$request->konsumsi_gas,
-                'tanggal' => $request->tanggal
+                'tanggal' => $request->tanggal,
+                'keterangan'=>$request->keterangan
             ]);
         }
 
