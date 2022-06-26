@@ -7,7 +7,7 @@
 @section('title', 'Gramedia Maintenance')
 
 @section('content_header')
-<h1 class="m-0 text-dark">Operasional</h1>
+<h1 class="m-0 text-dark">Equipment</h1>
 @stop
 
 @section('content')
@@ -18,7 +18,7 @@
                 {{-- <h2>Laravel 9 CRUD using DataTables Tutorial</h2> --}}
             </div>
             <div class="pull-right mb-2">
-                <a class="btn btn-success" href="{{ route('utilitas.create') }}">Tambah Utilitas</a>
+                <a class="btn btn-success" href="{{ route('utilitas.create') }}">Tambah Equipment</a>
             </div>
         </div>
     </div>

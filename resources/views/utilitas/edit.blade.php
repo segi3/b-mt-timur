@@ -189,10 +189,10 @@
                 <div class="form-group">
                     <strong>Status:</strong>
                     <select name="status_utilitas" class="form-control">
-                        <option value="Siap Operasional" {{ $utilita->role == 'Siap Operasional' ? 'selected' : '' }}>Siap Operasional
+                        <option value="Normal" {{ $utilita->role == 'Normal' ? 'selected' : '' }}>Normal
                         </option>
-                        <option value="Tidak Siap Operasional" {{ $utilita->role == 'Tidak Siap Operasional' ? 'selected' : '' }}>
-                            Tidak Siap Operasional</option>
+                        <option value="Failure" {{ $utilita->role == 'Failure' ? 'selected' : '' }}>
+                            Failure</option>
                     </select>
                     @error('status_utilitas')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>

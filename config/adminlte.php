@@ -288,9 +288,9 @@ return [
             'url'  => 'maintenance',
             'icon' => 'fas fa-fw fa-tools',
         ],
-        ['header' => 'KOMPLAIN'],
+        ['header' => 'Pengaduan'],
         [
-            'text' => 'Daftar Komplain',
+            'text' => 'Daftar Pengaduan',
             'url'  => 'komplain',
             'icon' => 'fas fa-fw fa-scroll',
         ],

@@ -21,14 +21,14 @@
                         </div>
 
                         <div class="col-lg-3 div-nav">
-                            <img src="{{ asset('img/ph-home-2.png') }}" alt="" style="max-width: 100%;">
+                            <img src="{{ asset('img/energy-og.jpeg') }}" alt="" style="max-width: 100%;">
                             <div style="text-align: center;">
                                 Konsumsi Energi
                             </div>
                             <a href="/energy"></a>
                         </div>
                         <div class="col-lg-3 div-nav">
-                            <img src="{{ asset('img/ph-home-3.png') }}" alt="" style="max-width: 100%;">
+                            <img src="{{ asset('img/operasional-og.jpeg') }}" alt="" style="max-width: 100%;">
                             <div style="text-align: center;">
                                 Maintenance
                             </div>
@@ -37,7 +37,7 @@
                         <div class="col-lg-3 div-nav">
                             <img src="{{ asset('img/ph-home-4.png') }}" alt="" style="max-width: 100%;">
                             <div style="text-align: center;">
-                                Komplain
+                                Pengaduan
                             </div>
                             <a href="/komplain"></a>
                         </div>

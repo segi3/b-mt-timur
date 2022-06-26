@@ -201,10 +201,10 @@
                 <div class="form-group">
                     <strong>Status:</strong>
                     <select name="status_utilitas" class="form-control">
-                        <option value="Siap Operasional">Siap Operasional
+                        <option value="Normal">Normal
                         </option>
-                        <option value="Tidak Siap Operasional">
-                            Tidak Siap Operasional</option>
+                        <option value="Failure">
+                            Failure</option>
                     </select>
                     @error('status_utilitas')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
