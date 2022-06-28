@@ -70,7 +70,7 @@ class UserCRUDController extends Controller
         $user->no_id_user = $request->no_id_user;
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = $request->password == null ? $user->password : $request->password;
+        $user->password = $request->password == null ? Hash::make($user->password) : Hash::make($request->password);
         $user->role = $request->role;
         $user->save();
         return redirect()->route('users.index')
