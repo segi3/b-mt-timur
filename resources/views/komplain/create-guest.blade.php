@@ -25,7 +25,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Nama Pelapor:</strong>
-                            <input type="text" name="nama_pelapor" class="form-control" value='{{old('nama_pelapor')}}'>
+                            <input type="text" name="nama_pelapor" class="form-control" value='{{old('nama_pelapor')}}' required>
                             @error('nama_pelapor')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                             @enderror
@@ -36,7 +36,7 @@
                         <div class="form-group">
                             <strong>Uraian Pekerjaan:</strong>
                             <input type="text" name="uraian_pekerjaan" class="form-control"
-                                value='{{old('uraian_pekerjaan')}}'>
+                                value='{{old('uraian_pekerjaan')}}' required>
                             @error('uraian_pekerjaan')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                             @enderror
