@@ -30,6 +30,7 @@ Route::get('/home', function() {
 // guest komplain
 Route::get('komplain/guest', [Controllers\KomplainCRUDController::class, 'create_guest'])->name('komplain.store.guest');
 Route::post('komplain', [Controllers\KomplainCRUDController::class, 'store'])->name('komplain.store');
+Route::get('komplain', [Controllers\KomplainCRUDController::class, 'index'])->name('komplain.index');
 
 Route::middleware(['auth'])->group(function() {
 
@@ -47,7 +48,6 @@ Route::middleware(['auth'])->group(function() {
     Route::resource('utilitas', Controllers\UtilitasCRUDController::class);
 
     // komplain
-    Route::get('komplain', [Controllers\KomplainCRUDController::class, 'index'])->name('komplain.index');
     Route::get('komplain/create', [Controllers\KomplainCRUDController::class, 'create'])->name('komplain.create');
     Route::get('komplain/{komplain}', [Controllers\KomplainCRUDController::class, 'show'])->name('komplain.show');
     Route::get('komplain/{komplain}/edit', [Controllers\KomplainCRUDController::class, 'edit'])->name('komplain.edit');
