@@ -58,7 +58,7 @@
             <table class="table table-bordered" id="datatable-crud">
                 <thead>
                     <tr>
-                        <th>No Utilitas</th>
+                        {{-- <th>No Utilitas</th> --}}
                         <th>Tanggal</th>
                         <th>Lokasi</th>
                         <th>Uraian Pekerjaan</th>
@@ -94,10 +94,11 @@
                     d.search = $('input[type="search"]').val()
                 }
             },
-            columns: [{
-                    data: 'no_util',
-                    name: 'no_util'
-                },
+            columns: [
+                // {
+                //     data: 'no_util',
+                //     name: 'no_util'
+                // },
                 {
                     data: 'jadwal_maintenance',
                     name: 'jadwal_maintenance'

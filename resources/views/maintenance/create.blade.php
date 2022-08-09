@@ -39,7 +39,7 @@
                     @enderror
                 </div>
             </div> --}}
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            {{-- <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nomor Utilitas:</strong>
                     <input type="text" name="no_util" class="form-control" placeholder="no_util"
@@ -48,7 +48,7 @@
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
                 </div>
-            </div>
+            </div> --}}
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
