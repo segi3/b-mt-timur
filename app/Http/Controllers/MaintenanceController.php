@@ -81,7 +81,7 @@ class MaintenanceController extends Controller
         $util = explode("::", $request->no_util);
         // dd($util);
         Maintenance::create([
-            'no_util' => $request->no_util, // use explode and $util[1] if use dropdown
+            'no_util' => '-', // use explode and $util[1] if use dropdown
             'jadwal_maintenance' => $request->jadwal_maintenance,
             'uraian_pekerjaan' => $request->uraian_pekerjaan,
             'status_pekerjaan' => $request->status_pekerjaan,
